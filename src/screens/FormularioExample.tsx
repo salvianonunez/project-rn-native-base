@@ -1,10 +1,9 @@
-import React from "react";
-import { SafeAreaView } from 'react-native'
-import { Text, Input, Box, Heading, Select, Center } from 'native-base'
+import React from 'react';
+import { Text, Input, Box, Heading, Select, Center } from 'native-base';
 
 const FormularioExample = () => {
-  const [genero, setGenero] = React.useState("");
-  return(
+  const [genero, setGenero] = React.useState('');
+  return (
     <Center
     height={'100%'}
     backgroundColor={'black'}
@@ -14,7 +13,7 @@ const FormularioExample = () => {
         marginTop={'15'}
         fontFamily={'heading'}
         fontStyle={'-moz-initial'}
-        fontSize={"2xl"}
+        fontSize={'2xl'}
         color={'white'}
         alignContent={'center'}
         textAlign={'center'}
@@ -27,16 +26,16 @@ const FormularioExample = () => {
           mx="7"
           fontFamily={'heading'}
           fontStyle={'-moz-initial'}
-          fontSize={"lg"}
+          fontSize={'lg'}
           color={'white'}
           textAlign={'left'}
         >
         Nombre
         </Text>
-        <Input 
+        <Input
           backgroundColor={'white'}
           mx="2" w="90%" size="md"
-          variant="rounded" 
+          variant="rounded"
           placeholder="Ingrese sus nombres completos"
         />
       </Box>
@@ -46,16 +45,16 @@ const FormularioExample = () => {
           mx="7"
           fontFamily={'heading'}
           fontStyle={'-moz-initial'}
-          fontSize={"lg"}
+          fontSize={'lg'}
           color={'white'}
           textAlign={'left'}
         >
         Apellidos
         </Text>
-        <Input 
+        <Input
           backgroundColor={'white'}
           mx="2" w="90%" size="md"
-          variant="rounded" 
+          variant="rounded"
           placeholder="Ingrese sus apellidos "
         />
       </Box>
@@ -65,7 +64,7 @@ const FormularioExample = () => {
           mx="7"
           fontFamily={'heading'}
           fontStyle={'-moz-initial'}
-          fontSize={"lg"}
+          fontSize={'lg'}
           color={'white'}
           textAlign={'left'}
         >
@@ -90,7 +89,4 @@ const FormularioExample = () => {
   );
   };
 
-const styles = {
-
-}
 export default FormularioExample;

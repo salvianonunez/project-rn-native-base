@@ -20,6 +20,8 @@ import CountScreen from './src/screens/CountScreen';
 import SelectExample from './src/screens/SelectExample';
 import FormularioExample from './src/screens/FormularioExample';
 import LoginExample from './src/screens/LoginExample';
+import FormControlExample from './src/screens/FormControlExample';
+import Navigation from './src/navigation/Navigation';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -28,14 +30,21 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  // return (
+  //   <NativeBaseProvider>
+  //     <SafeAreaView style={backgroundStyle}>
+  //       {/* <CountScreen/>
+  //       <SelectExample/> */}
+  //       {/* <LoginExample/> */}
+  //       {/* <FormularioExample/> */}
+  //       <FormControlExample/>
+  //     </SafeAreaView>
+  //   </NativeBaseProvider>
+  // );
+
   return (
     <NativeBaseProvider>
-      <SafeAreaView style={backgroundStyle}>
-        {/* <CountScreen/>
-        <SelectExample/> */}
-        {/* <LoginExample/> */}
-        <FormularioExample/>
-      </SafeAreaView>
+      <Navigation />
     </NativeBaseProvider>
   );
 }

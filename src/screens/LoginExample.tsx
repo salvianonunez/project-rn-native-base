@@ -1,27 +1,27 @@
-import React from "react";
-import { SafeAreaView } from 'react-native'
-import { Text, Input, Link, Button, Box, Heading, HStack, Center } from 'native-base';
+import React from 'react';
+
+import {Input, Link, Button, Heading, Center } from 'native-base';
 
 const LoginExample = () => {
-return(
+return (
   <Center
     backgroundColor={'blueGray.800'}
     height={'100%'}
   >
     <Heading
       fontFamily={'mono'}
-      fontSize={"3xl"}
+      fontSize={'3xl'}
       color={'white'}
       textAlign={'center'}
     >
     Inicio de sesión
     </Heading>
-    
-    <Input 
+
+    <Input
       backgroundColor={'white'}
       marginTop={'5'}
       mx="auto" w="80%" size="md"
-      variant="rounded" 
+      variant="rounded"
       placeholder="Usuario"
     />
 
@@ -29,17 +29,17 @@ return(
     backgroundColor={'white'}
     marginTop={'5'}
     mx="auto" w="80%" size="md"
-    variant="rounded" 
+    variant="rounded"
     type="password"
     placeholder="Contraseña"
     />
 
       <Link
-        alignSelf='center'
+        alignSelf="center"
         marginTop={'4'}
         alignContent={'center'}
-        href="https://facebook.com" 
-        isExternal _text={{color: "blue.400"}} 
+        href="https://facebook.com"
+        isExternal _text={{color: 'blue.400'}}
         mt={-0.5} _web={{mb: -2}}>
             ¿Olvidaste tu contraseña?
       </Link>
@@ -49,18 +49,18 @@ return(
       alignItems={'center'}
     >
       <Link
-        href="https://facebook.com" 
-        isExternal _text={{color: "blue.400"}} 
+        href="https://facebook.com"
+        isExternal _text={{color: "blue.400"}}
         mt={-0.5} _web={{mb: -2}}>
             ¿Olvidaste tu contraseña?
       </Link>
     </Box> */}
 
-    <Button 
-    onPress={() => console.log("hello world")}
+    <Button
+    onPress={() => console.log('hello world')}
     mx="auto" w="60%" size="md"
     marginTop={'5'}
-    colorScheme='secondary'
+    colorScheme="secondary"
     >
     Iniciar sesión
     </Button>
