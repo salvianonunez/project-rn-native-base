@@ -22,6 +22,8 @@ import FormularioExample from './src/screens/FormularioExample';
 import LoginExample from './src/screens/LoginExample';
 import FormControlExample from './src/screens/FormControlExample';
 import Navigation from './src/navigation/Navigation';
+import store from './src/redux/services/index';
+import { Provider } from 'react-redux';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -43,9 +45,12 @@ function App(): JSX.Element {
   // );
 
   return (
+    <Provider store={store}>
     <NativeBaseProvider>
       <Navigation />
     </NativeBaseProvider>
+    </Provider>
+
   );
 }
 

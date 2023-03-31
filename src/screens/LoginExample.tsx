@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {Input, Link, Button, Heading, Center } from 'native-base';
+import { setAuthStatus, setUser } from '../redux/reducers/authReducer/auth';
+import { AuthStatus } from '../redux/reducers/authReducer/authInterface';
+import { useReduxDispatch } from '../redux/services/index';
 
 const LoginExample = () => {
+
+const [email, setEmail] = useState('');
+const dispatch = useReduxDispatch();
+const login = () =>{
+  dispatch(setUser({email}));
+  dispatch(setAuthStatus('authenticated'));
+}
 return (
   <Center
     backgroundColor={'blueGray.800'}
@@ -23,6 +33,8 @@ return (
       mx="auto" w="80%" size="md"
       variant="rounded"
       placeholder="Usuario"
+      value={email}
+      onChangeText={(text) => setEmail(text)}
     />
 
     <Input
@@ -57,7 +69,7 @@ return (
     </Box> */}
 
     <Button
-    onPress={() => console.log('hello world')}
+    onPress={login}
     mx="auto" w="60%" size="md"
     marginTop={'5'}
     colorScheme="secondary"
