@@ -19,10 +19,16 @@ const HomeStack = () =>{
     }}
     >
       <Stack.Screen 
+      options={{
+        headerShown: true,
+      }}
       name='HomeScreen'
       component={HomeScreen}
        />
-      <Stack.Screen 
+      <Stack.Screen
+      options={{
+        headerShown: true,
+      }}
       name='TestScreen'
       component={TestScreen}
        />
@@ -42,6 +48,7 @@ const BottomTabNavigator = () =>{
         name='HomeStack'
         component={HomeStack}
         options={{
+          headerShown:false,
           tabBarIcon:({color, focused, size}) =>{
             return <RemixIcon
               name='home'
